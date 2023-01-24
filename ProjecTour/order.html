@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/data.js" defer></script>
+    <script src="js/order-script.js" defer></script>
+    <title>Family Restaurant</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div style="display: flex; justify-content: space-between;">
+        <a href="index.html#">
+          <div class="logo">
+            <img class="img-responsive" src="imgs/logo.png" />
+            <h2 class="logo_text">Family <br />Restaurant</h2>
+          </div>
+        </a>
+        <ul>
+          <li><a id="nav_home" href="index.html#" class="nav-heading-a"><i class="fa-solid fa-home"></i><h3 class="nav-heading">Home</h3></a></li>
+          <li><a id="nav_menu" href="index.html#menu" class="nav-heading-a"><i class="fa-solid fa-address-book"></i><h3 class="nav-heading">Menu</h3></a></li>
+          <li><a id="nav_services" href="index.html#services" class="nav-heading-a"><i class="fa-solid fa-shopping-basket "></i><h3 class="nav-heading">Services</h3></a></li>
+          <li><a id="nav_about" href="index.html#about" class="nav-heading-a"><i class="fa-solid fa-user"></i><h3 class="nav-heading">About Us</h3></a></li>
+          <li><a id="nav_contact" href="index.html#contact" class="nav-heading-a"><i class="fa-solid fa-map-marker"></i><h3 class="nav-heading">Contact</h3></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="forbidden">
+      <h3>403</h3>
+      <p>Page not found.</p>
+      <span id='r'>Returning to home page: <i id="time">-</i></span>
+      <span><button onclick="window.location.href = 'index.html'" class="btn btn-primary">Home</button></span>
+    </div>
+    <div class="order-body" id="body">
+      <div class="product-card-container">
+        <div class="product-card">
+          <img src="" alt="loading" id="image">
+          <div class="product-card-body">
+            <span class="tag">
+              <p>Special</p>
+            </span>
+            <h1 id="name"></h1>
+            <span class="discount" id="price">
+            </span>
+            <span class="price" id="discount"></span>
+            <p class="description" id="description">
+            </p>
+            <div class="margin-top" id="addons">
+            </div>
+            <div class="margin-top" id="service-options">
+            </div>
+            <div class="margin-top">
+              <span class="discount" id="tot-price">
+                Total Price: $
+              </span>
+            </div>
+            <button class="button">
+              Order
+            </button>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="contact" class="footer">
+         <div class="container">
+            <div class="pdn-top-30">
+                <div class="footer-icons">
+                  <a href="#" class="footer-singe-icon"><img src="imgs/facebook.png"></a>
+                  <a href="#" class="footer-singe-icon"><img src="imgs/Twitter.png"></a>
+                  <a href="#" class="footer-singe-icon"><img src="imgs/linkedin.png"></a>
+                  <a href="#" class="footer-singe-icon"><img src="imgs/instagram.png"></a>
+                </div>
+                <div class="footer-info">
+                  <div class="footer-contact-us">
+                    <h3>CONTACT US</h3>
+                    <span>123 Main Street Main <br>Avenue,<br>
+                    Colombo, Sri Lanka<br>
+                    +0000000000</span>
+                  </div>
+                  <div class="footer-additional-links">
+                    <h3>ADDITIONAL LINKS</h3>
+                    <ul class="link">
+                        <li> <a href="#">About us</a></li>
+                        <li> <a href="#">Terms and conditions</a></li>
+                        <li> <a href="#"> Privacy policy</a></li>
+                        <li> <a href="#">News</a></li>
+                        <li> <a href="#"> Contact us</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-form">
+                    <h3>Contact</h3>
+                    <div class="footer-inputs">
+                        <div class="footer-single-input">
+                          <input class="Newsletter" placeholder="Name" type="text">
+                        </div>
+                        <div class="footer-single-input">
+                          <input class="Newsletter" placeholder="Email" type="text">
+                        </div>
+                        <div class="footer-single-input">
+                          <textarea class="textarea" placeholder="comment" type="text">Comment</textarea>
+                        </div>
+                    </div>
+                    <button class="Subscribe">Submit</button>
+                  </div>
+                </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <p>Copyright 2023 All Right Reserved By Thalindu Lakshan</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+  </body>
+</html>

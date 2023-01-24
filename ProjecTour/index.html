@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <title>Family Restaurant</title>
+  </head>
+  <body>
+    <div id="loader" class="loader_bg">
+      <div class="loader_a">
+        <div class="loader loader-3">
+          <div class="dot dot1"></div>
+          <div class="dot dot2"></div>
+          <div class="dot dot3"></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div style="display: flex; justify-content: space-between;">
+        <a href="#top">
+          <div class="logo">
+            <img class="img-responsive" src="imgs/logo.png" />
+            <h2 class="logo_text">Family <br />Restaurant</h2>
+          </div>
+        </a>
+        <ul>
+          <li><a id="nav_home" href="#" class="current nav-heading-a"><i class="fa-solid fa-home"></i><h3 class="nav-heading">Home</h3></a></li>
+          <li><a id="nav_menu" href="#menu" class="nav-heading-a"><i class="fa-solid fa-address-book"></i><h3 class="nav-heading">Menu</h3></a></li>
+          <li><a id="nav_services" href="#services" class="nav-heading-a"><i class="fa-solid fa-shopping-basket "></i><h3 class="nav-heading">Services</h3></a></li>
+          <li><a id="nav_about" href="#about" class="nav-heading-a"><i class="fa-solid fa-user"></i><h3 class="nav-heading">About Us</h3></a></li>
+          <li><a id="nav_contact" href="#contact" class="nav-heading-a"><i class="fa-solid fa-map-marker"></i><h3 class="nav-heading">Contact</h3></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="image-slider carousel-container" id="top">
+      <div class="mySlides animate">
+        <img src="imgs/burger.jpg" alt="slide" />
+        <div class="text">Hamburger, Germany</div>
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/Penang.jpg" alt="slide" />
+        <div class="text">Penang assam laksa, Malaysia</div>
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/sushi.jpeg" alt="slide" />
+        <div class="text">Sushi, Japan</div>
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/pizza.jpg" alt="slide" />
+        <div class="text">Neapolitan pizza, Italy</div>
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/tom.png" alt="slide" />
+        <div class="text">Tom yum goong, Thailand</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="prevSlide()">&#10094;</a>
+      <a class="next" onclick="nextSlide()">&#10095;</a>
+
+      <!-- The dots/circles -->
+      <div class="dots-container">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+        <span class="dots" onclick="currentSlide(5)"></span>
+      </div>
+      <div class="slider-middle">
+        <img class="img-chef" src="imgs/chef.png" />
+        <h1>Welcome To Family Restaurant</h1>
+        <p>
+          The ultimate alfresco dining experience with breathtaking views of the
+          Ocean
+        </p>
+      </div>
+    </div>
+
+    <section class="container content">
+      <div id="menu" class="section">
+        <h1 class="title">Menu</h1>
+        <h2 class="title-second">Foods</h2>
+        <div class="card-row" id="foods-container">
+        </div>
+        <div class="button-container" id="foods-show">
+          <button onclick="handleOnClickButton('FOODS')" class="btn btn-secondary">See More...</button>
+        </div>
+
+        <h2 class="title-second">Desserts</h2>
+        <div class="card-row" id="desserts-container">
+        </div>
+        <div class="button-container" id="desserrs-show">
+          <button onclick="handleOnClickButton('DESSERTS')" class="btn btn-secondary">See More...</button>
+        </div>
+
+
+        <h2 class="title-second">Drinks</h2>
+        <div class="card-row" id="drinks-container">
+        </div>
+        <div class="button-container" id="drinks-show">
+          <button onclick="handleOnClickButton('DRINKS')" class="btn btn-secondary">See More...</button>
+        </div>
+      </div>
+      <div id="services" class="section">
+        <h1 class="title">Our Services</h1>
+        <div class="service-section ">
+          <div class="service-item service-item-devider">
+            <i class="fa-solid fa-cutlery fa-5x"></i>
+            <h1 class="service-item-icon">Dine In</h1>
+          </div>
+          <div class="service-item service-item-devider">
+            <i class="fa-solid fa-home fa-5x"></i>
+            <h1 class="service-item-icon">Home Delivery</h1>
+          </div>
+          <div class="service-item service-item-devider">
+            <i class="fa-solid fa-gift fa-5x"></i>
+            <h1 class="service-item-icon">Gift Delivery</h1>
+          </div>
+          <div class="service-item">
+            <i class="fa-solid fa-bell fa-5x"></i>
+            <h1 class="service-item-icon">Pre Order</h1>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="section">
+        <h1 class="title">About Us</h1>
+        <div class="about-row">
+          <section class="about-wrapper">
+            <div class="about-card">
+              <div class="about-card-header">
+                <span>
+                  <h5>Srilanka branch</h5>
+                </span>
+              </div>
+              <div class="about-card-body">
+                <span>
+                  <iframe width="100%" height="300" src="https://www.youtube.com/embed/u-fNqxkPn1I" title="Odyssey Restaurant Video Presentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </span>
+                <span>
+                  <h3>Description</h3>
+                  <p>
+                    Seafood Restaurants · Sri Lankan Seafood Haven · The Fat Crab · Seafood Cove · Ceylon Seafish Restaurant and Pub · Lagoon.
+                  </p>
+                </span>
+                <span>
+                  <h3>Location</h3>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d991.1459777897247!2d79.9842267538734!3d6.447432515215907!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1673542830382!5m2!1sen!2slk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </span>
+              </div>
+            </div>
+          </section>
+          <section class="about-wrapper">
+            <div class="about-card">
+              <div class="about-card-header">
+                <span>
+                  <h5>Japan branch</h5>
+                </span>
+              </div>
+              <div class="about-card-body">
+                <span>
+                  <iframe width="100%" height="300" src="https://www.youtube.com/embed/tejvF88n3Zo" title="A famous family restaurant in Japan! Gusto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </span>
+                <span>
+                  <h3>Description</h3>
+                  <p>
+                    An experience filled with unique touches makes Sushi Akira stand out in Tokyo’s sea of sushi restaurants. Driven by an energetic young chef with a solid self-defined concept, the appeal goes well beyond the power of youth to share the worldview of a chef with the most profound respect for his roots.
+                  </p>
+                </span>
+                <span>
+                  <h3>Location</h3>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2321.9228387245116!2d138.18456506851078!3d36.825870241884495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1673957944172!5m2!1sen!2slk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="contact" class="footer">
+         <div class="container">
+            <div class="pdn-top-30">
+                <div class="footer-icons">
+                  <a href="#" class="footer-singe-icon"><img src="imgs/facebook.png"></a>
+                  <a href="#"  class="footer-singe-icon"><img src="imgs/Twitter.png"></a>
+                  <a href="#"  class="footer-singe-icon"><img src="imgs/linkedin.png"></a>
+                  <a href="#"  class="footer-singe-icon"><img src="imgs/instagram.png"></a>
+                </div>
+                <div class="footer-info">
+                  <div class="footer-contact-us">
+                    <h3>CONTACT US</h3>
+                    <span>123 Main Street Main <br>Avenue,<br>
+                      Colombo, Sri Lanka<br>
+                      +0000000000</span>
+                  </div>
+                  <div class="footer-additional-links">
+                    <h3>ADDITIONAL LINKS</h3>
+                    <ul class="link">
+                        <li> <a href="#">About us</a></li>
+                        <li> <a href="#">Terms and conditions</a></li>
+                        <li> <a href="#"> Privacy policy</a></li>
+                        <li> <a href="#">News</a></li>
+                        <li> <a href="#"> Contact us</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-form">
+                    <h3>Contact</h3>
+                    <div class="footer-inputs">
+                        <div class="footer-single-input">
+                          <input class="Newsletter" placeholder="Name" type="text">
+                        </div>
+                        <div class="footer-single-input">
+                          <input class="Newsletter" placeholder="Email" type="text">
+                        </div>
+                        <div class="footer-single-input">
+                          <textarea class="textarea" placeholder="comment" type="text">Comment</textarea>
+                        </div>
+                    </div>
+                    <button class="Subscribe">Submit</button>
+                  </div>
+                </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <p>Copyright 2023 All Right Reserved By Thalindu Lakshan</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+  </body>
+</html>

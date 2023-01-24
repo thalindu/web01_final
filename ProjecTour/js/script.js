@@ -4,7 +4,7 @@ setTimeout(() => {
  handleOnClickButton("FOODS")
  handleOnClickButton("DESSERTS")
  handleOnClickButton("DRINKS")
-}, 10);
+}, 1000);
 
 let foods = 0;
 let desserts = 0;
